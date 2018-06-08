@@ -13,14 +13,17 @@ export const setPresenceFilter = (filter) => ({
 export const RECEIVE_ANIMAL = 'RECEIVE_ANIMAL';
 export const receiveAnimal = (name) => ({
   type: RECEIVE_ANIMAL,
-  animal: [{
+  animal: {
     name,  
     present: true
-  }]
+  }
 });
 
 export const BREAK_OUT = 'BREAK_OUT';
 export const breakOut = (name) => ({
   type: BREAK_OUT,
-  name
+  animal: {
+    name,  
+    present: false
+  }
 });
